@@ -27,6 +27,23 @@ It is as simple as:
 To build with TLS support, you'll need OpenSSL development libraries (e.g.
 libssl-dev on Debian/Ubuntu).
 
+### 🚀 Quick Local Build & Test (Fácil acceso)
+Si quieres compilar y probar rápidamente una instancia local de Valkey desde tu fork, ejecuta los siguientes comandos en tu terminal:
+
+```bash
+# 1. Compilar el servidor con las opciones por defecto
+make
+
+# 2. Iniciar el servidor localmente
+cd src
+./valkey-server
+
+# 3. En otra terminal, abrir el cliente para probar la conexión
+cd src
+./valkey-cli
+valkey> ping
+# Respuesta esperada: PONG
+
 To build TLS support as Valkey built-in:
 
     % make BUILD_TLS=yes
